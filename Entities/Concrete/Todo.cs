@@ -15,5 +15,6 @@ namespace Entities.Concrete
     public DateTime CreatedDate { get; set; }
     public DateTime? DueDate { get; set; }
     public List<TodoTag> TodoTags { get; set; }
+    public bool IsComplete { get; set; } = false;
   }
 }

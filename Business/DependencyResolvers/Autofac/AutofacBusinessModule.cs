@@ -19,6 +19,8 @@ namespace Business.DependencyResolvers.Autofac
       builder.RegisterType<EfTagDal>().As<ITagDal>().SingleInstance();
       builder.RegisterType<TagManager>().As<ITagService>().SingleInstance();
 
+      builder.RegisterType<EfTodoTagDal>().As<ITodoTagDal>().SingleInstance();
+      builder.RegisterType<TodoTagManager>().As<ITodoTagService>().SingleInstance();
 
       // AOP Injection
       var assembly = System.Reflection.Assembly.GetExecutingAssembly();

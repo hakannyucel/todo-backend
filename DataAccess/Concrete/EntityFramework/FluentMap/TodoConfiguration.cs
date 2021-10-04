@@ -23,6 +23,9 @@ namespace DataAccess.Concrete.EntityFramework.FluentMap
       builder.Property(x => x.Description).HasMaxLength(1000);
       builder.Property(x => x.CreatedDate).IsRequired();
       builder.Property(x => x.DueDate).IsRequired(false);
+      builder.Property(x => x.IsComplete).IsRequired();
+
+      builder.Property(x => x.IsComplete).HasDefaultValue(false);
 
       // Column Name
       builder.Property(x => x.Id).HasColumnName("todo_id");
@@ -30,6 +33,7 @@ namespace DataAccess.Concrete.EntityFramework.FluentMap
       builder.Property(x => x.Description).HasColumnName("todo_description");
       builder.Property(x => x.DueDate).HasColumnName("todo_due_date");
       builder.Property(x => x.CreatedDate).HasColumnName("todo_created_date");
+      builder.Property(x => x.IsComplete).HasColumnName("todo_is_complete");
     }
   }
 }
