@@ -15,11 +15,6 @@ namespace API.Controllers
       _todoService = todoService;
     }
 
-    public IActionResult Index()
-    {
-      return View();
-    }
-
     [HttpGet("get-all")]
     public IActionResult GetAll()
     {
